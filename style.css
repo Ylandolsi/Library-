@@ -70,7 +70,8 @@ a{
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 50px
+    gap: 50px ; 
+    scale: 0.9; 
 
 
 }
@@ -83,17 +84,41 @@ a{
 }
 .grid-item   {
     width:100%;
-    height :600px;
+    height:800px;
     border-radius: 20px;
     overflow: hidden;
-
-    
 }
 .grid-item img {
     width: 100%;
     height: 600px;
     object-fit: cover;
 
+}
+
+.flexlota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.read-show , .notread-show{
+    background-color: rgb(194, 87, 87);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+.read-show{
+    background-color: rgb(87, 194, 87);
+}
+
+
+.description-show{
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .addbutton {
@@ -179,6 +204,15 @@ input[type="checkbox"] {
 }
 
 
+svg {
+    stroke: white;
+    stroke-width: 2;
+    transition: transform 0.2s ease-in-out;
+}
+svg:hover {
+    transform: scale(1.1);
+    stroke: #c0c0c0;
+}
 
 
 
