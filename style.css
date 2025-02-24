@@ -20,17 +20,23 @@ body{
 .navbar{
     display: flex;
     justify-content: space-around;
-    height: 50px;
+    height: 80px;
     flex-wrap: wrap;
-    padding: 14px;
     align-items: center;
     background-color: #3C3C36;
     gap:5px;
     overflow: hidden;
 
 }
+a{
+    text-decoration: none;
+}
 .searchbar input {
     border-radius: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: black;
 }
 .pages{
     display: flex;
@@ -98,6 +104,73 @@ body{
     background-color: #1E201E;
 }
 
+/* .grid-item:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+} */
+
+dialog {
+    position: fixed;
+    top: 50%;
+    width: 800px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1E201E;
+    color: #1E201E;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+::backdrop { /* when the dialoge appears */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    opacity: 0.75;
+}
+label{
+    font-weight: bold;
+}
+input , button {
+    color: black;
+    background-color: #eeeeee;
+}
+textarea{
+    color: black;
+    background-color: #eeeeee;
+    
+}
+.form-group , .form-buttons
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self:center;
+    gap: 15px;
+
+    padding: 10px 60px;
+}
+.form-buttons{
+    flex-direction: row;
+}
+
+
+.form-group input:not([type="checkbox"])  , button {
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+}
+label {
+    display: flex;
+    align-items: center;
+    gap :10px
+}
+input[type="checkbox"] {
+    -webkit-transform: scale(2); 
+    margin: 10px;
+}
 @media (max-width: 768px) {
     .others {
         margin: 0 10px;
