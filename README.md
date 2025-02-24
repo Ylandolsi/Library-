@@ -1,1 +1,1 @@
-Library Projet buils as part of the odin project
+Library Projet built as part of the odin project
