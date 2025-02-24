@@ -128,17 +128,18 @@ deleteButtons.forEach( button => {
 }) ;
 
 
-let readButtons = document.querySelectorAll('.read-show');
-let notReadButtons = document.querySelectorAll('.notread-show');
-readButtons.forEach( button => {
-    button.addEventListener("click", function() {
+function toggleReadStatus(button) {
+    if (button.classList.contains('read-show')) {
         button.textContent = 'Not Read';
         button.className = 'notread-show';
-    }) 
-}) ;
-notReadButtons.forEach( button => {
-    button.addEventListener("click", function() {
+    } else {
         button.textContent = 'Read';
         button.className = 'read-show';
-    }) 
-} ); 
+    }
+}
+
+document.querySelector('.grid-container').addEventListener('click', function(e) {
+    if (e.target.classList.contains('read-show') || e.target.classList.contains('notread-show')) {
+        toggleReadStatus(e.target);
+    }
+});
