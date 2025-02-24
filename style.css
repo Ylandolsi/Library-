@@ -109,7 +109,7 @@ a{
     transition: transform 0.5s;
 } */
 
-dialog {
+ dialog {
     position: fixed;
     top: 50%;
     width: 800px;
@@ -120,10 +120,10 @@ dialog {
     border-radius: 10px;
     background-color: #1E201E;
     color: #1E201E;
-    display: flex;
-    flex-direction: column;
     gap: 50px;
-}
+} 
+
+
 
 ::backdrop { /* when the dialoge appears */
     background: rgba(0, 0, 0, 0.7);
@@ -171,6 +171,17 @@ input[type="checkbox"] {
     -webkit-transform: scale(2); 
     margin: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .others {
         margin: 0 10px;

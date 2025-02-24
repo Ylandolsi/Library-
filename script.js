@@ -21,10 +21,21 @@ gridItems.forEach( item => {
 } );
 
 const dialog = document.querySelector("dialog");
-let addButtons= document.querySelectorAll('button');
+let addButtons= document.querySelectorAll('.crtbutt');
+
+let cancelButton = document.querySelector(".close-btn");
+let saveButton = document.querySelector(".submit");
 addButtons.forEach( button => {
     button.addEventListener("click", function() {
         dialog.showModal();
 
     }) 
 }) ; 
+
+// cancelButton.addEventListener("click", function() {
+//     dialog.close();
+// }
+// ); 
+// saveButton.addEventListener("click", function() {
+//     dialog.close();
+// });
